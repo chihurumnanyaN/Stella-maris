@@ -1,11 +1,15 @@
 "use server";
-import { readTeamMembers } from "@/actions/pastorial-team";
+import prisma from "@/lib/prisma";
 import Link from "next/link";
 import React from "react";
 import { FaEllipsisV, FaGripVertical, FaPlus } from "react-icons/fa";
 
 const PastoralTeam = async () => {
-  const PASTORAL_TEAM = await readTeamMembers();
+  const PASTORAL_TEAM = await prisma.pastoralTeamMember.findMany({
+    orderBy: {
+      id: "asc",
+    },
+  });
 
   return (
     <div className="min-h-screen bg-background-light flex">
