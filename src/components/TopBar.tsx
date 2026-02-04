@@ -8,7 +8,7 @@ export default function TopBar() {
       <div className="max-w-7xl mx-auto px-4 py-2 flex flex-col md:flex-row justify-between items-center">
         {/* Left: Contact Info */}
         <div className="flex flex-col md:flex-row md:space-x-6 space-y-1 md:space-y-0">
-          <div className="flex flex-row space-x-3 md:space-x-6">
+          <div className="flex flex-row md:flex-col space-x-3 md:space-x-6">
             <div className="flex items-center space-x-2">
               <FaPhoneAlt className="text-[#D4A73B]" />
               <span>+234 800 000 0000</span>
@@ -20,12 +20,12 @@ export default function TopBar() {
           </div>
           <div className="flex items-center space-x-2">
             <FaMapMarkerAlt className="text-[#D4A73B]" />
-            <span>123 Church Street, Aba, Nigeria</span>
+            <span>Ayaba Umueze Abayi, Aba, Abia state, Nigeria</span>
           </div>
         </div>
 
         {/* Right: Optional quick info */}
-        <div className="mt-2 md:mt-0 hidden md:flex">
+        <div className="mt-2 md:mt-0 hidden lg:flex">
           <span className="italic">Welcome to Stella Maris Parish Aba!</span>
         </div>
       </div>

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 import Banner from "@/components/Banner";
 import ContactSection from "@/components/ReactOut";
 
@@ -14,8 +14,28 @@ const SECTIONED_ACTIVITIES = [
     image: "/images1.jpg",
     activities: [
       { name: "Sunday Mass", time: "6:30am, 8:30am, 10:30am & 5:30pm" },
-      { name: "Weekday Mass", time: "6:30am (Mon–Fri)" },
+      { name: "Weekday Mass", time: "6:00am (Mon–Fri)" },
       { name: "Confession", time: "thursdays, Fridays and Saturdays – 7:30am" },
+      { name: "Catechism Classes", time: "Sundays – After Mass" },
+    ],
+  },
+  {
+    title: "Societies & Community Life",
+    desc: "Building unity, leadership, and service through active parish groups.",
+    image: "/images4.jpg",
+    activities: [
+      { name: "CWO Meeting", time: "1st Sunday of the month" },
+      { name: "CMO Meeting", time: "2nd Sunday of the month" },
+      { name: "Youth Meeting (CYON)", time: "Saturdays – 4:00pm" },
+      {
+        name: "Mary League Girls Mass",
+        time: "First friday of the month– 4:00pm",
+      },
+      {
+        name: "Altar servers Meeting",
+        time: "First saturday of the month– 4:00pm",
+      },
+      { name: "Choir Practice", time: "Tuesdays & Thursdays – 5:00pm" },
     ],
   },
   {
@@ -26,33 +46,6 @@ const SECTIONED_ACTIVITIES = [
       { name: "Rosary", time: "Daily – 6:00am" },
       { name: "Eucharistic Adoration", time: "Thursdays – 10:30am" },
       { name: "Novena Devotions", time: "Will be anounced when necessary" },
-    ],
-  },
-  {
-    title: "Faith Formation & Youth",
-    desc: "Helping children, youths, and adults grow in faith through teaching and mentorship.",
-    image: "/images3.jpg",
-    activities: [
-      { name: "Catechism Classes", time: "Sundays – After Mass" },
-      { name: "Youth Meeting (CYON)", time: "Saturdays – 4:00pm" },
-    ],
-  },
-  {
-    title: "Societies & Community Life",
-    desc: "Building unity, leadership, and service through active parish groups.",
-    image: "/images4.jpg",
-    activities: [
-      { name: "CWO Meeting", time: "1st Sunday of the month" },
-      { name: "CMO Meeting", time: "2nd Sunday of the month" },
-      {
-        name: "Mary League Girls Mass",
-        time: "First friday of the month– 4:00pm",
-      },
-      {
-        name: "Altar servers Meeting",
-        time: "First saturday of the month– 4:00pm",
-      },
-      { name: "Choir Practice", time: "Tuesdays & Thursdays – 5:00pm" },
     ],
   },
 ];

@@ -113,9 +113,9 @@ export default function GalleryPage() {
       {/* Event Sections */}
       <section className="max-w-7xl mx-auto px-4 py-16 space-y-20">
         {GALLERY_EVENTS.map((section, i) => (
-          <section key={i} id={`event-${i}`} className="space-y-6">
+          <section key={i} id={`event-${i}`} className="space-y-6 pt-30 -mt-20">
             {/* Section Header */}
-            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2 pt-20">
+            <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2 ">
               <div>
                 <h2 className="text-2xl md:text-3xl font-semibold">
                   {section.event}

@@ -2,7 +2,6 @@
 
 import { useTodaysReadings } from "@/hooks/useTodaysReadings";
 import Image from "next/image";
-import { BiArrowToRight } from "react-icons/bi";
 import { BsArrowRight } from "react-icons/bs";
 import { FaBible, FaBook, FaPray } from "react-icons/fa";
 

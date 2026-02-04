@@ -13,7 +13,7 @@ export default function ContactPage() {
         moreText="Get in touch with Stella Maris Parish"
       />
       <div className="max-w-7xl mx-auto px-4 py-8 text-left text-gray-700">
-        <p className="text-lg leading-relaxed">
+        <p className="text-lg leading-relaxed text-center">
           On this Contact page, you can find all the information you need to
           reach Stella Maris Parish. View our address, phone number, and email
           on the left, send us a message directly using the contact form on the
@@ -90,7 +90,7 @@ export default function ContactPage() {
               <textarea
                 name="message"
                 rows={5}
-                className="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#1B2A49] focus:border-[#1B2A49] transition-all duration-300"
+                className="w-full border resize-none border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#1B2A49] focus:border-[#1B2A49] transition-all duration-300"
                 required
               />
             </div>

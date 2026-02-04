@@ -7,7 +7,7 @@ const Logo = ({ colour }: { colour: string }) => {
     <Link href="/" className="flex items-center space-x-3">
       <Image
         src="/stella.png"
-        alt="Stella Maris Parish"
+        alt="Stella Maris Parish logo"
         width={50}
         height={50}
         className="rounded-full"

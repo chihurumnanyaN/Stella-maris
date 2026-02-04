@@ -1,10 +1,7 @@
-import type { Metadata } from "next";
+import { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
-import TopBar from "@/components/TopBar";
-import Providers from "./providers";
 
+// app/layout.tsx
 export const metadata: Metadata = {
   title: "Stella Maris Parish Aba – Catholic Church in Abia",
   description:
@@ -18,14 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="bg-white">
-        <Providers>
-          <TopBar />
-          <Navbar />
-          {children}
-          <Footer />
-        </Providers>
-      </body>
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }

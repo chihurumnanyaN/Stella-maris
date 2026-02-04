@@ -3,11 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "motion/react";
-import { FaChurch, FaFlag, FaUsers } from "react-icons/fa";
-import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
+import { BsArrowRight } from "react-icons/bs";
 import Banner from "@/components/Banner";
 import ContactSection from "@/components/ReactOut";
 import History from "@/components/History";
+import { BiDownload } from "react-icons/bi";
 
 export default function HistoryPage() {
   return (
@@ -20,29 +20,14 @@ export default function HistoryPage() {
       />
 
       {/* Intro */}
-      <section className="mx-auto max-w-7xl px-6 py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="max-w-3xl"
-        >
-          <h2 className="text-3xl font-semibold">A Story of Faith</h2>
-          <p className="mt-4 text-muted-foreground leading-relaxed">
-            Stella Maris Parish was established to serve the growing Catholic
-            faithful in Abayi, Aba. What began as a small worshipping community
-            has grown into a vibrant parish known for strong faith, unity, and
-            service to humanity.
-          </p>
-        </motion.div>
-      </section>
-
-      {/* Timeline */}
       <History />
-
-      {/* Image + Narrative */}
-      <section className="mx-auto max-w-7xl px-6 py-16">
+      <section className="mx-auto max-w-7xl px-6 py-10">
+        <Link
+          className="capitalize gap-3 mx-auto mt-5 mb-20 bg-[#D4A73B] hover:bg-[#D4A73B]/80 shadow-md text-white text-lg font-bold w-fit p-3 rounded-xl flex justify-center items-center"
+          href="/StellaMarisparish-history.pdf"
+        >
+          download full history <BiDownload className="text-xl " />
+        </Link>
         <div className="grid gap-10 lg:grid-cols-2">
           <motion.div
             initial={{ opacity: 0, x: -20 }}

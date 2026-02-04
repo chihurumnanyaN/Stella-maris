@@ -7,8 +7,8 @@ import Logo from "./Logo";
 
 export function Footer() {
   return (
-    <footer className="bg-[#16203A]  text-white mt-16">
-      <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="bg-[#16203A]  text-white mt-16 flex flex-col justify-center">
+      <div className="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8 ">
         {/* Logo & Name */}
         <div className="hidden md:flex flex-col space-y-3">
           <Logo colour={"white"} />
@@ -79,6 +79,19 @@ export function Footer() {
           <p>Ayaba Umueze Abayi, Aba, Abia state, Nigeria</p>
           <p>Phone: +234 800 000 0000</p>
           <p>Email: info@stellamarisparish.com</p>
+        </div>
+
+        <div className="bg-amber-100 w-45 h-45 md:ml-auto rounded-2xl p-5 flex flex-col justify-center gap-5">
+          <p className="text-blue-900 text-center font-bold  ">
+            Donate to the parish
+          </p>
+
+          <Link
+            href="/donate"
+            className={`bg-(--primary) shadow-md px-6 py-3  rounded-md font-bold hover:bg-(--primary)/85 text-center text-white transition-colors duration-300`}
+          >
+            Donate
+          </Link>
         </div>
       </div>
 

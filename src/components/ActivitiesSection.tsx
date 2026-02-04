@@ -31,7 +31,7 @@ export default function ActivitiesSection() {
     <section className="py-20">
       <div className="max-w-6xl mx-auto px-4 text-center">
         {/* Header */}
-        <h2 className="text-3xl font-bold text-slate-800 mb-4">Activities</h2>
+        <h2 className="text-4xl font-bold text-slate-800 mb-4">Activities</h2>
         <p className="max-w-3xl mx-auto text-slate-600 mb-12">
           Participate in parish life in our community. Every activity is an
           opportunity to pray, worship, know your faith, meet friends as we go
@@ -66,7 +66,7 @@ export default function ActivitiesSection() {
         {/* Button */}
         <Link
           href="/activities"
-          className="inline-block bg-[#1B2A49] text-white px-8 py-3 rounded-lg font-medium hover:bg-[#1B2A49]/80 transition"
+          className="inline-block bg-(--primary) text-white px-8 py-3 rounded-xl font-medium hover:bg-(--primary)/80 transition"
         >
           View All Activities
         </Link>

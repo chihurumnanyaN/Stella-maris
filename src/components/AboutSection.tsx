@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { BsArrowRight } from "react-icons/bs";
 
 export default function AboutSection() {
   return (
@@ -23,18 +24,19 @@ export default function AboutSection() {
           </p>
           <Link
             href="/about"
-            className="inline-block bg-[#D4A73B] text-[#1B2A49] font-semibold px-6 py-3 rounded hover:bg-[#c49e2f] transition-colors"
+            className="flex justify-center items-center w-fit gap-2 bg-[#D4A73B] text-[#1B2A49] font-semibold px-6 py-3 rounded hover:bg-[#c49e2f] transition-colors"
           >
             Learn More
+            <BsArrowRight />
           </Link>
         </div>
 
         {/* Optional Image */}
         <div className="md:w-1/2 mt-8 md:mt-0">
           <Image
-            src="/hero1.png"
-            width={60}
-            height={50}
+            src="/stella5.jpg"
+            width={1000}
+            height={400}
             alt="Stella Maris Parish Aba"
             className="w-full rounded-lg shadow-lg object-cover"
           />
