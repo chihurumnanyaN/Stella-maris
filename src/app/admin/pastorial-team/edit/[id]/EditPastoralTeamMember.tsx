@@ -52,7 +52,7 @@ const EditPastoralTeamMember: React.FC<Props> = ({ member }) => {
       phone: formData.get("phone") as string,
       whatsappNum: formData.get("whatsappNum") as string,
       email: formData.get("email") as string,
-      imageUrl: imagePreview,
+      imageUrl: imagePreview ?? undefined,
     });
 
     setSaving(false);
