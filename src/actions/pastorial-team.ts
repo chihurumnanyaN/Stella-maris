@@ -4,6 +4,32 @@ import cloudinary from "@/lib/cloudinary";
 import prisma from "@/lib/prisma";
 import { revalidatePath } from "next/cache";
 
+// actions/pastorial-team.ts
+
+export async function updateTeamMember(
+  id: number,
+  data: {
+    name: string;
+    role: string;
+    bio: string;
+    phone: string;
+    whatsappNum: string;
+    email: string;
+    imageUrl?: string;
+  },
+) {
+  return prisma.pastoralTeamMember.update({
+    where: { id },
+    data,
+  });
+}
+
+export async function getPastoralTeamMember(id: number) {
+  return prisma.pastoralTeamMember.findUnique({
+    where: { id },
+  });
+}
+
 export async function createTeamMember(formData: FormData) {
   const name = formData.get("name") as string;
   const role = formData.get("role") as string;
@@ -49,4 +75,18 @@ export async function createTeamMember(formData: FormData) {
   });
 
   revalidatePath("/admin/pastorial-team/add");
+}
+
+export async function deletePastoralTeamMember(id: number) {
+  try {
+    await prisma.pastoralTeamMember.delete({
+      where: { id },
+    });
+
+    revalidatePath("/admin/pastorial-team");
+    return { success: true };
+  } catch (error) {
+    console.error("Error deleting pastoral team member:", error);
+    return { success: false, error: "Failed to delete member" };
+  }
 }

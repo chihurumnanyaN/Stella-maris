@@ -9,3 +9,31 @@ body {
   background: #f4f2eb;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
+/* tailwind.config.js  or  global CSS */
+
+.loader {
+  display: inline-block;
+}
+
+@layer utilities {
+  @keyframes l8-1 {
+    to {
+      transform: translateX(25px);
+    }
+  }
+
+  @keyframes l8-2 {
+    to {
+      transform: rotate(-180deg) translateX(25px);
+    }
+  }
+
+  .animate-\[l8-1_1s_infinite_linear\] {
+    animation: l8-1 1s infinite linear;
+  }
+
+  .animate-\[l8-2_1s_infinite_linear\] {
+    animation: l8-2 1s infinite linear;
+  }
+}

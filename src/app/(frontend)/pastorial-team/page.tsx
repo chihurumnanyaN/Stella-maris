@@ -1,3 +1,4 @@
+"use server";
 import Image from "next/image";
 import Banner from "@/components/Banner";
 import { BiPhone } from "react-icons/bi";
@@ -6,9 +7,8 @@ import { TfiEmail } from "react-icons/tfi";
 import Link from "next/link";
 import prisma from "@/lib/prisma";
 
-export const runtime = "nodejs";
-
-const PASTORAL_TEAM = [
+{
+  /*const PASTORAL_TEAM = [
   {
     id: 1,
     name: "very. rev. fr. Dr joseph azuka anuonye",
@@ -39,15 +39,15 @@ const PASTORAL_TEAM = [
     whatsappNum: "090xxxxxxxx",
     email: "joe@gmail.com",
   },
-];
+];*/
+}
 export default async function PastoralTeamPage() {
-  {
-    /*}  const PASTORAL_TEAM = await prisma.pastoralTeamMember.findMany({
+  const PASTORAL_TEAM = await prisma.pastoralTeamMember.findMany({
     orderBy: {
       id: "asc",
     },
-  });*/
-  }
+  });
+
   return (
     <div>
       {/* Banner */}

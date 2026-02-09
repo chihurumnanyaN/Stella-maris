@@ -62,6 +62,9 @@ const AddPastoralTeamMember: React.FC = () => {
                   <div className="size-32 rounded-full bg-background-light border-2 border-dashed border-[#e5e7eb] flex items-center justify-center overflow-hidden hover:border-primary/50 hover:bg-primary/5 transition-all">
                     {imagePreview ? (
                       <Image
+                        width={300}
+                        height={300}
+                        unoptimized
                         src={imagePreview}
                         alt="Preview"
                         className="w-full h-full object-cover"

@@ -3,6 +3,8 @@ import prisma from "@/lib/prisma";
 import Link from "next/link";
 import React from "react";
 import { FaEllipsisV, FaGripVertical, FaPlus } from "react-icons/fa";
+import { FiDelete } from "react-icons/fi";
+import Delete from "./Delete";
 
 const PastoralTeam = async () => {
   const PASTORAL_TEAM = await prisma.pastoralTeamMember.findMany({
@@ -43,6 +45,7 @@ const PastoralTeam = async () => {
             {PASTORAL_TEAM.map((member) => (
               <MemberCard
                 key={member.id}
+                id={member.id}
                 name={member.name}
                 role={member.role}
                 joined={member.createdAt}
@@ -61,25 +64,24 @@ const PastoralTeam = async () => {
 export default PastoralTeam;
 
 const MemberCard = ({
+  id,
   name,
   role,
   joined,
   status,
   image,
 }: {
+  id: number;
   name: string;
   role: string;
   joined: Date;
   status: string;
   image: string;
 }) => (
-  <div className="relative bg-white rounded-xl p-5 shadow-sm hover:shadow-xl transition-all border border-gray-100 cursor-grab">
-    <FaGripVertical className="absolute top-4 left-4 text-gray-300" />
-    <button className="absolute top-4 right-4 text-gray-400">
-      <FaEllipsisV />
-    </button>
-
-    <div className="flex flex-col items-center text-center mt-4">
+  <div className="relative flex flex-col justify-between items-center bg-white rounded-xl p-5 shadow-sm hover:shadow-xl transition-all border border-gray-100 cursor-grab">
+    <div className="flex flex-col items-center text-center w-full mt-4">
+      <FaGripVertical className="absolute top-4 left-4 text-gray-300" />
+      <Delete id={id} />
       <div
         className="size-24 rounded-full border-4 border-white shadow-md mb-4 bg-cover bg-center"
         style={{ backgroundImage: `url(${image})` }}
@@ -92,12 +94,12 @@ const MemberCard = ({
       </span>
     </div>
 
-    <div className="mt-6 flex justify-between items-center border-t border-gray-50 pt-4">
+    <div className="mt-6 flex justify-between items-center w-full border-t border-gray-50 pt-4">
       <span className="text-xs text-gray-500">
         Joined {joined.toLocaleDateString()}
       </span>
       <Link
-        href="/admin/pastorial-team/edit"
+        href={`/admin/pastorial-team/edit/${id}`}
         className="text-xs font-bold text-(--primary) hover:underline"
       >
         Edit Profile

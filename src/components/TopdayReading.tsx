@@ -16,7 +16,7 @@ export default function TodaysReadings() {
           src="/images2.jpg"
           alt="Church background"
           fill
-          className="object-cover"
+          className="object-fill"
           priority
         />
         <div className="absolute inset-0 bg-black/70 bg-opacity-60"></div>{" "}
