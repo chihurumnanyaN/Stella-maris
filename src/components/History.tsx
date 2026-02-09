@@ -1,6 +1,7 @@
 // components/History.tsx
 import { motion, AnimatePresence } from "motion/react";
 import React, { useState } from "react";
+import { ReactNode, ElementType } from "react";
 import { FaChurch, FaFlag, FaUsers } from "react-icons/fa";
 import { FaPeopleGroup } from "react-icons/fa6";
 
